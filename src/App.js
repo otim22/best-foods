@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
 export default class App extends Component {
-  render() {
+    state = {
+      name: "Otim",
+    };
+
+    render() {
       return (
-          <div>
-              <h1>Header</h1>
-          </div>
+        <div className="header">
+          <h1>Header content, {this.state.name}</h1>
+        </div>
       );
-  }
+    }
 }
