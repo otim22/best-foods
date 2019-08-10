@@ -1,16 +1,17 @@
 import React from 'react';
 // import { dataURLToBlob } from 'blob-util';
+import { Collection, CollectionItem } from 'react-materialize';
 
 const RestuarantList = ({ restuarantNames }) => (
-  <ul>
+  <Collection>
     {
       restuarantNames.map((restuarant, index) => (
-        <li key={index}>
+        <CollectionItem key={index}>
           { restuarant }
-        </li>
+        </CollectionItem>
       ))
     }
-  </ul>
+  </Collection>
 );
 
 export default RestuarantList;

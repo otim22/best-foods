@@ -4,7 +4,7 @@ import RestuarantListPage from './components/RestuarantListPage';
 export default class App extends Component {
   render() {
     return (
-      <div className="header">
+      <div>
         <RestuarantListPage />
       </div>
     );
