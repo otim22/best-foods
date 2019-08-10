@@ -25,6 +25,8 @@ export default class RestuarantListPage extends Component {
     return (
       <div>
         <Modal
+          id="addRestuarantModal"
+          data-test="addRestuarantModal"
           open={isModalOpen}
           header="New Restuarant"
           trigger={

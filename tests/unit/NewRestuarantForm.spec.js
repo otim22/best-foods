@@ -4,10 +4,13 @@ import NewRestuarantForm from '../../src/components/NewRestuarantForm';
 
 describe('NewRestuarantForm', () => {
   describe('clicking the save button', () => {
-    it('calls the onSave handler', () => {
-      const saveHandler = jest.fn();
+    let saveHandler;
+    let wrapper;
 
-      const wrapper = mount(<NewRestuarantForm onSave={saveHandler} />);
+    beforeEach(() => {
+      saveHandler = jest.fn();
+
+      wrapper = mount(<NewRestuarantForm onSave={saveHandler} />);
 
       wrapper
         .find('input[data-test="newRestuarantName"]')
@@ -16,8 +19,17 @@ describe('NewRestuarantForm', () => {
       wrapper
         .find('button[data-test="saveNewResturantButton"]')
         .simulate('click');
-
+    });
+    
+    it('calls the onSave handler', () => {
       expect(saveHandler).toHaveBeenCalledWith('Sushi! Place');
+    });
+
+    it('clear the text field', () => {
+      expect(wrapper
+        .find('input[data-test="newRestuarantName"]')
+        .props().value,
+      ).toEqual('');
     });
   });
 });
