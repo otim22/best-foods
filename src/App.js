@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
+import RestuarantListPage from './components/RestuarantListPage';
 
 export default class App extends Component {
-    state = {
-      name: "Otim",
-    };
-
-    render() {
-      return (
-        <div className="header">
-          <h1>Header content, {this.state.name}</h1>
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div className="header">
+        <RestuarantListPage />
+      </div>
+    );
+  }
 }

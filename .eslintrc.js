@@ -15,7 +15,6 @@ module.exports = {
     'jquery': true,
   },
   rules: {
-    'no-redeclare': 'error',
-    "indent": 2
+    'no-redeclare': 'error'
   },
 };
