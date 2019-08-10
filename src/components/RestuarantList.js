@@ -3,13 +3,23 @@ import React from 'react';
 import { Collection, CollectionItem } from 'react-materialize';
 
 const RestuarantList = ({ restuarantNames }) => (
-  <Collection>
+  <Collection header="Restuarants">
     {
-      restuarantNames.map((restuarant, index) => (
-        <CollectionItem key={index}>
-          { restuarant }
-        </CollectionItem>
-      ))
+      restuarantNames.length === 0
+        ?
+        (
+          <CollectionItem style={{ color: 'gray' }}>
+            ( No restuarant added )
+          </CollectionItem>
+        )
+        :
+        (
+          restuarantNames.map((restuarant, index) => (
+            <CollectionItem key={index}>
+              { restuarant }
+            </CollectionItem>
+          ))
+        )
     }
   </Collection>
 );
