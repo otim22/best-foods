@@ -5,7 +5,7 @@ describe('adding a restuarant', () => {
     cy.visit('http://localhost:3000');
 
     cy.get('[data-test="newRestuarantName"]')
-      .should('not.exist');
+      .should('not.be.visible');
 
     cy.get('[data-test="addResturantButton"]')
       .click();
@@ -17,7 +17,7 @@ describe('adding a restuarant', () => {
       .click();
 
     cy.get('[data-test="newRestuarantName"]')
-      .should('not.exist');
+      .should('not.be.visible');
 
     cy.contains(restuarantName);
   });
