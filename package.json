@@ -48,6 +48,7 @@
     "eslint-plugin-cypress": "^2.6.1",
     "eslint-plugin-jest": "^22.15.0",
     "eslint-plugin-react": "^7.14.3",
+    "formik": "^1.5.8",
     "materialize-css": "^1.0.0",
     "parcel-bundler": "^1.12.3",
     "react-materialize": "^3.3.4"

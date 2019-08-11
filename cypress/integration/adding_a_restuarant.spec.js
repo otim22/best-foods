@@ -4,11 +4,20 @@ describe('adding a restuarant', () => {
 
     cy.visit('http://localhost:3000');
 
+    // modal not shown at start
+    cy.get('[data-test="newRestuarantName"]')
+      .should('not.be.visible');
+    
+    // modal can be cancel
+    cy.get('[data-test="addResturantButton"]').click();
+
+    cy.get('[data-test="addRestuarantModal"] button.modal-close').click();
+    
     cy.get('[data-test="newRestuarantName"]')
       .should('not.be.visible');
 
-    cy.get('[data-test="addResturantButton"]')
-      .click();
+    // modals allows adding restuarant
+    cy.get('[data-test="addResturantButton"]').click();
 
     cy.get('[data-test="newRestuarantName"]')
       .type(restuarantName);
