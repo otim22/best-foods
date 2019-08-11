@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![CircleCI](https://circleci.com/gh/otim22/best-foods.svg?style=svg)] | (https://circleci.com/gh/otim22/best-foods)
+![CircleCI](https://circleci.com/gh/otim22/best-foods.svg?style=svg)  (https://circleci.com/gh/otim22/best-foods)
 
 ## Available Scripts
 
