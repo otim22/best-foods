@@ -20,7 +20,7 @@ describe('NewRestuarantForm', () => {
         .find('button[data-test="saveNewResturantButton"]')
         .simulate('click');
     });
-    
+
     it('calls the onSave handler', () => {
       expect(saveHandler).toHaveBeenCalledWith('Sushi! Place');
     });
